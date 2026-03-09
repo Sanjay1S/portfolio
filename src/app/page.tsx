@@ -22,6 +22,11 @@ export default function Home() {
               Optum, building healthcare AI across NLP, computer vision, and
               large-scale data pipelines.
             </p>
+            <p className="text-lg leading-relaxed text-text-secondary max-w-xl mt-4">
+              Lately I&apos;ve been thinking about how LLMs are changing the way
+              we build recommendation and decision-making systems — and what
+              happens when those systems start acting on their own.
+            </p>
           </div>
         </Container>
       </section>
