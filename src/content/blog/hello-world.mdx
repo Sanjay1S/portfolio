@@ -1,0 +1,32 @@
+---
+title: "Building This Portfolio with Next.js and Tailwind"
+date: "2026-03-08"
+excerpt: "A look at the design decisions and tech stack behind this site — inspired by Anthropic's warm, typography-driven aesthetic."
+tags: ["next.js", "design", "tailwind"]
+published: true
+---
+
+## Why Build a Custom Portfolio?
+
+As a data scientist, I wanted a space that reflects both the technical depth of my work and a clean, readable design. Off-the-shelf templates rarely strike the right balance — they're either too flashy or too generic.
+
+This site is built with **Next.js 15**, **Tailwind CSS v4**, and **MDX** for blog posts. The visual design draws from Anthropic's approach: warm backgrounds, strong typography hierarchy, and generous whitespace.
+
+## The Design System
+
+The color palette uses a warm off-white (`#faf9f5`) instead of pure white, with a coral accent (`#d97757`) for visual anchors. Typography is split between **Space Grotesk** for headings (a geometric sans-serif with character) and **Source Serif 4** for body text (warm and readable).
+
+Dark mode inverts the palette while preserving warmth — the background shifts to a deep, warm black (`#141413`) rather than a cold gray.
+
+## Technical Decisions
+
+A few choices worth noting:
+
+- **MDX for blog posts** — Write in Markdown with React component support. Each post is a `.mdx` file with frontmatter for metadata.
+- **Static generation** — All blog posts are statically generated at build time for fast page loads.
+- **Fluid typography** — Font sizes scale smoothly across viewport widths.
+- **Dark mode** — Class-based toggle with `localStorage` persistence and a flash-prevention script.
+
+## What's Next
+
+I'll be adding research projects as I publish them, and writing about topics in ML, NLP, and systems engineering. Stay tuned.

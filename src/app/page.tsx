@@ -1,103 +1,158 @@
-import Image from "next/image";
+import Container from "@/components/Container";
+import { EXPERIENCE, EDUCATION, SKILLS, SITE } from "@/lib/constants";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      {/* Hero */}
+      <section className="pt-20 pb-16 sm:pt-28 sm:pb-20">
+        <Container variant="content">
+          <div className="animate-fade-in-up">
+            <h1 className="font-heading text-4xl sm:text-5xl font-bold tracking-tight mb-4">
+              {SITE.name}
+            </h1>
+            <p className="text-xl sm:text-2xl text-text-secondary font-heading font-medium mb-6">
+              Data Scientist
+            </p>
+            <div className="h-px w-12 bg-accent mb-8" />
+            <p className="text-lg leading-relaxed text-text-secondary max-w-xl">
+              I build and fine-tune ML systems — from diffusion models and RAG
+              pipelines to production-scale NLP. Currently at Corsair Gaming,
+              working on generative AI and information retrieval. Previously at
+              Optum, building healthcare AI across NLP, computer vision, and
+              large-scale data pipelines.
+            </p>
+          </div>
+        </Container>
+      </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      {/* Currently */}
+      <section className="pb-16 sm:pb-20">
+        <Container variant="content">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-text-muted mb-8">
+            Currently
+          </h2>
+          <div className="border-l-[3px] border-accent pl-6 space-y-4">
+            <p className="leading-relaxed">
+              <span className="font-heading font-semibold text-text">
+                Data Scientist at Corsair Gaming
+              </span>
+              <span className="text-text-muted"> — Milpitas, CA</span>
+            </p>
+            <p className="text-text-secondary leading-relaxed">
+              Fine-tuning Qwen diffusion models via LoRA with split training
+              architectures. Building enterprise RAG systems over 50K+ documents
+              with sub-second latency. Deploying on-prem LLM inference at scale
+              with vLLM and Docker.
+            </p>
+          </div>
+        </Container>
+      </section>
+
+      {/* Experience */}
+      <section className="pb-16 sm:pb-20">
+        <Container variant="content">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-text-muted mb-10">
+            Experience
+          </h2>
+          <div className="space-y-14">
+            {EXPERIENCE.map((exp) => (
+              <div key={exp.company}>
+                <div className="mb-6">
+                  <h3 className="font-heading text-xl font-semibold">
+                    {exp.company}
+                  </h3>
+                  <p className="text-sm text-text-muted font-heading">
+                    {exp.location}
+                  </p>
+                </div>
+                <div className="space-y-8">
+                  {exp.roles.map((role) => (
+                    <div key={role.title} className="relative pl-6 border-l border-border">
+                      <div className="absolute left-[-5px] top-[6px] w-[9px] h-[9px] rounded-full bg-accent" />
+                      <div className="flex flex-col sm:flex-row sm:items-baseline sm:justify-between gap-0.5 mb-3">
+                        <h4 className="font-heading font-semibold">
+                          {role.title}
+                        </h4>
+                        {role.period && (
+                          <span className="text-sm text-text-muted font-heading whitespace-nowrap">
+                            {role.period}
+                          </span>
+                        )}
+                      </div>
+                      <ul className="space-y-2">
+                        {role.highlights.map((h, i) => (
+                          <li
+                            key={i}
+                            className="text-text-secondary leading-relaxed text-[0.9375rem]"
+                          >
+                            {h}
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Education */}
+      <section className="pb-16 sm:pb-20">
+        <Container variant="content">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-text-muted mb-10">
+            Education
+          </h2>
+          <div className="space-y-8">
+            {EDUCATION.map((edu) => (
+              <div key={edu.school} className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                <div>
+                  <h3 className="font-heading font-semibold">{edu.school}</h3>
+                  <p className="text-text-secondary">
+                    {edu.degree}
+                    {edu.detail && <span className="text-text-muted"> — {edu.detail}</span>}
+                    {edu.gpa && <span className="text-text-muted"> — GPA: {edu.gpa}</span>}
+                  </p>
+                </div>
+                <div className="text-sm text-text-muted font-heading whitespace-nowrap">
+                  <p>{edu.period}</p>
+                  <p>{edu.location}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+
+      {/* Skills */}
+      <section className="pb-20 sm:pb-28">
+        <Container variant="content">
+          <h2 className="font-heading text-sm font-semibold uppercase tracking-widest text-text-muted mb-10">
+            Skills
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+            {SKILLS.map((group) => (
+              <div key={group.category}>
+                <h3 className="font-heading font-semibold text-sm mb-3">
+                  {group.category}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {group.items.map((item) => (
+                    <span
+                      key={item}
+                      className="text-sm px-2.5 py-1 rounded-md bg-bg-subtle text-text-secondary font-heading"
+                    >
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
+    </>
   );
 }
