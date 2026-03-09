@@ -23,9 +23,8 @@ export default function Home() {
               large-scale data pipelines.
             </p>
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl mt-4">
-              Lately I&apos;ve been thinking about how LLMs are changing the way
-              we build recommendation and decision-making systems — and what
-              happens when those systems start acting on their own.
+              Passionate about machine learning and artificial intelligence —
+              always exploring what&apos;s next in the space.
             </p>
           </div>
         </Container>
