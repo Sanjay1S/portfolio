@@ -5,7 +5,7 @@ export const SITE = {
     "Data Scientist working on diffusion models, RAG systems, and ML infrastructure. MS CS from UC Riverside.",
   url: "https://sanjaysrinivasa.com",
   email: "sanjaysrinivasacv@gmail.com",
-  linkedin: "https://www.linkedin.com/in/sanjay",
+  linkedin: "https://www.linkedin.com/in/sanjay-srinivasa-31668915a/",
   github: "https://github.com/Sanjay1S",
 };
 
