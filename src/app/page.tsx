@@ -12,7 +12,7 @@ export default function Home() {
               {SITE.name}
             </h1>
             <p className="text-xl sm:text-2xl text-text-secondary font-heading font-medium mb-6">
-              Data Scientist
+              Member of Technical Staff
             </p>
             <div className="h-px w-12 bg-accent mb-8" />
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl">
