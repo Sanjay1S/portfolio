@@ -17,14 +17,16 @@ export default function Home() {
             <div className="h-px w-12 bg-accent mb-8" />
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl">
               I build and fine-tune ML systems — from diffusion models and RAG
-              pipelines to production-scale NLP. Currently at Corsair Gaming,
-              working on generative AI and information retrieval. Previously at
-              Optum, building healthcare AI across NLP, computer vision, and
+              pipelines to supply chain automations and production-scale NLP.
+              Currently at Corsair Gaming, working on generative AI, intelligent
+              automation, and information retrieval. Previously at Optum,
+              building healthcare AI across NLP, computer vision, and
               large-scale data pipelines.
             </p>
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl mt-4">
-              Passionate about machine learning and artificial intelligence —
-              always exploring what&apos;s next in the space.
+              Passionate about machine learning, AI-driven automation, and
+              building systems that remove toil — always exploring what&apos;s
+              next in the space.
             </p>
           </div>
         </Container>
@@ -45,9 +47,10 @@ export default function Home() {
             </p>
             <p className="text-text-secondary leading-relaxed">
               Fine-tuning Qwen diffusion models via LoRA with split training
-              architectures. Building enterprise RAG systems over 50K+ documents
-              with sub-second latency. Deploying on-prem LLM inference at scale
-              with vLLM and Docker.
+              architectures. Building supply chain planning automations that
+              cut planner cycle time by ~70%. Architecting multi-agent systems
+              for AI-powered image generation. Deploying on-prem LLM inference
+              at scale with vLLM and Docker.
             </p>
           </div>
         </Container>
