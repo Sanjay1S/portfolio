@@ -16,7 +16,7 @@ export default function Home() {
             </p>
             <div className="h-px w-12 bg-accent mb-8" />
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl">
-              I build and fine-tune ML systems — from diffusion models and RAG
+              I build and fine-tune ML systems: from diffusion models and RAG
               pipelines to supply chain automations and production-scale NLP.
               Currently at Corsair Gaming, working on generative AI, intelligent
               automation, and information retrieval. Previously at Optum,
@@ -25,7 +25,7 @@ export default function Home() {
             </p>
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl mt-4">
               Passionate about machine learning, AI-driven automation, and
-              building systems that remove toil — always exploring what&apos;s
+              building systems that remove toil - always exploring what&apos;s
               next in the space.
             </p>
           </div>
