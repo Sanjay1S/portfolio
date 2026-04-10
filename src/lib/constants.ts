@@ -151,40 +151,4 @@ export const PROJECTS = [
     tags: ["PyTorch", "DoRA", "LoRA", "Fine-tuning", "ICML 2024"],
     github: "https://github.com/Sanjay1S/DoRA-From-Scratch",
   },
-  {
-    title: "Supply Chain Lead Time Automation",
-    description:
-      "End-to-end automation replacing a manual Excel workflow for supply chain planners. Reads reference data via DAX/ADOMD from Analysis Services cubes, validates lead time mismatches in Python (pandas), generates WebADI-compliant Excel output, and routes approvals through Power Automate. Cuts planner cycle time by ~70%.",
-    tags: ["Python", "DAX", "Power Automate", "Graph API", "pandas", "openpyxl"],
-  },
-  {
-    title: "Demand Projection & Forecast Automation",
-    description:
-      "Automated demand forecasting pipeline sampling historical order velocity to project supply needs. Approval routing via Microsoft Graph API and Power Automate, with a forecast-vs-actuals dashboard delivered to VPs per cycle. Saves ~720 hours/year of manual planning work.",
-    tags: ["Python", "Power Automate", "Graph API", "SharePoint", "Dashboards"],
-  },
-  {
-    title: "Multi-Agent Image Generation System",
-    description:
-      "Architected a multi-agent system using crewAI for AI-powered product image generation. Agents coordinate prompt routing, tool selection, and multi-step reasoning across diffusion and editing models for branded Corsair product visualization.",
-    tags: ["crewAI", "Diffusion Models", "LoRA", "Multi-Agent", "Python"],
-  },
-  {
-    title: "GDPR/IAM Compliance Agent",
-    description:
-      "AI-powered identity and access management tool for GDPR compliance. Given a corporate email, searches across 30+ connected systems (M365, Slack, Atlassian, Oracle, Shopify), surfaces anomalous grants, and executes revocation workflows with a full audit trail.",
-    tags: ["React", "MCP", "Azure AD", "Oracle", "GDPR"],
-  },
-  {
-    title: "Enterprise RAG Pipeline",
-    description:
-      "Production RAG system over 200K+ documents with transformer-based embeddings and metadata-driven retrieval. Deployed on-prem LLM inference via vLLM and Docker over an 8M+ vector index, achieving 95% Recall@5 and sub-second latency.",
-    tags: ["vLLM", "Docker", "Vector DB", "Transformers", "RAG"],
-  },
-  {
-    title: "Forethought → PDP FAQ Enhancement Pipeline",
-    description:
-      "Monthly automated pipeline ingesting Forethought chat and Zendesk ticket exports to enhance product FAQs across 231 models. Regex product classification, local LLM FAQ generation via Ollama, dedup, SKU mapping, and a PDP Enhancement Agent selecting top-15 FAQs in brand voice.",
-    tags: ["Ollama", "DynamoDB", "OpenSearch", "NLP", "Python"],
-  },
 ];
