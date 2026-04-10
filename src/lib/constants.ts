@@ -2,7 +2,7 @@ export const SITE = {
   name: "Sanjay Srinivasa",
   title: "Sanjay Srinivasa",
   description:
-    "Data Scientist working on diffusion models, RAG systems, and ML infrastructure. MS CS from UC Riverside.",
+    "Machine Learning Engineer building generative AI, RAG systems, and ML infrastructure. MS CS from UC Riverside.",
   url: "https://sanjaysrinivasa.com",
   email: "sanjaysrinivasacv@gmail.com",
   linkedin: "https://www.linkedin.com/in/sanjay-srinivasa-31668915a/",
@@ -21,12 +21,13 @@ export const EXPERIENCE = [
     location: "Milpitas, California",
     roles: [
       {
-        title: "Data Scientist",
+        title: "Machine Learning Engineer",
         period: "Dec 2025 — Present",
         highlights: [
-          "Built a supply chain planning automation via DAX reads, lead time mismatch validation, and WebADI-compliant output generation; delivered a dashboard for cycle tracking, cutting planner cycle time by ~70%.",
           "Architected a multi-agent system using crewAI for AI-powered image generation, coordinating prompt routing, tool selection, and multi-step reasoning across diffusion and editing models.",
-          "Fine-tuned Qwen diffusion models via LoRA with a two-stage architecture, training only the denoiser on precomputed latents; applied FP8 quantization and gradient checkpointing to fit VRAM constraints across dual-GPU on-prem infrastructure.",
+          "Fine-tuned Qwen diffusion models via LoRA with a two-stage architecture, caching multimodal conditioning to train only the denoiser on precomputed latents; used FP8 quantization, BF16 compute, and gradient checkpointing to fit per-GPU VRAM constraints across dual-GPU on-prem infrastructure.",
+          "Benchmarked DoRA (magnitude/direction decomposition) against LoRA across ranks 4–32 in PyTorch to optimize adapter strategy; validated zero-overhead inference via weight merging.",
+          "Built a supply chain planning automation via DAX reads, lead time mismatch validation, and WebADI-compliant output generation; delivered a dashboard for cycle tracking, cutting planner cycle time by ~70%.",
           "Designed a demand projection automation sampling historical order velocity for supply forecasts; routed approvals via Graph API and Power Automate with a forecast-vs-actuals dashboard, saving 720 hours/year.",
         ],
       },
@@ -34,8 +35,8 @@ export const EXPERIENCE = [
         title: "Machine Learning / DS Intern",
         period: "Jun 2025 — Dec 2025",
         highlights: [
-          "Developed a GDPR/IAM compliance AI agent automating access audits across 30 different data sources; surfaces anomalous grants and executes revocation workflows with a full audit trail.",
-          "Built an enterprise RAG pipeline over 200K+ documents using transformer-based embeddings and metadata-driven retrieval; deployed a scalable on-prem LLM inference microservice (vLLM, Docker) over an 8M+ vector index, achieving 95% Recall@5 and sub-second latency.",
+          "Built an enterprise RAG pipeline over 200K+ documents using transformer-based embeddings and metadata-driven retrieval; achieved 95% Recall@5 and sub-second latency at scale.",
+          "Deployed a scalable on-prem LLM inference microservice (vLLM, Docker) over an 8M+ vector index; benchmarked throughput and latency under concurrent load to validate production scalability.",
         ],
       },
     ],
@@ -48,7 +49,8 @@ export const EXPERIENCE = [
         title: "Associate AI/ML Engineer",
         period: "Nov 2023 — Aug 2024",
         highlights: [
-          "Built a healthcare demand forecasting automation projecting drug supply needs from claims data; automated reconciliation reports flagging formulary deviations, reducing manual review by 60%.",
+          "Fine-tuned Llama-2-70B on a 4×H100 80GB GPU cluster using DeepSpeed ZeRO-3 and LoRA for clinical decision support and medical reasoning; deployed on Azure AKS with auto-scaling, increasing NPS score by 55%.",
+          "Built LLM alignment pipeline, QLoRA (NF4 4-bit, double quantization) for Supervised Fine-tuning followed by DPO for preference alignment; validated with 34-test suite on quantization fidelity and loss correctness.",
           "Modeled ensemble methods (XGBoost, Random Forest, Logistic Regression) validated via holdout experiments, improving debt recovery by 70%.",
           "Engineered a distributed PySpark + SQL pipeline on Databricks to process 100K+ healthcare documents with automated PHI de-identification via SparkNLP, achieving 98.6% precision.",
         ],
@@ -62,7 +64,7 @@ export const EXPERIENCE = [
         ],
       },
       {
-        title: "Software Engineer",
+        title: "Software Engineer - Machine Learning",
         period: "Jul 2020 — Mar 2023",
         highlights: [
           "Fine-tuned YOLOv5 and built an OCR pipeline deployed via ONNX and Triton Inference Server for GPU-accelerated extraction of patient vitals from unstructured PDFs, achieving 93% mAP@0.5.",
@@ -99,38 +101,33 @@ export const SKILLS = [
       "Deep Learning",
       "NLP",
       "RAG",
-      "Diffusion Models",
       "Information Retrieval",
       "Prompt Engineering",
       "Agent Orchestration",
       "LLM Evaluation",
+      "Neural Networks",
+      "Unsupervised Learning",
       "A/B Testing",
     ],
   },
   {
-    category: "Data & Infrastructure",
+    category: "Data Processing & Streaming",
     items: [
-      "PySpark",
+      "Apache Spark (PySpark)",
       "Databricks",
-      "Snowflake",
-      "SQL",
       "AWS S3",
+    ],
+  },
+  {
+    category: "Cloud & ML Infra",
+    items: [
+      "Azure",
+      "Snowflake",
       "Docker",
       "vLLM",
       "Vector Databases",
       "Microservices",
-    ],
-  },
-  {
-    category: "Cloud & Automation",
-    items: [
-      "Azure",
-      "Jenkins",
-      "ONNX",
-      "Triton Inference Server",
-      "Power Automate",
-      "Microsoft Graph API",
-      "SharePoint",
+      "Distributed Systems",
     ],
   },
   {
@@ -140,6 +137,20 @@ export const SKILLS = [
 ];
 
 export const PROJECTS = [
+  {
+    title: "LLM Alignment Lab",
+    description:
+      "From-scratch PyTorch implementation of a complete LLM alignment pipeline combining QLoRA (NF4 4-bit quantization with double quantization) and DPO (Direct Preference Optimization). Two-stage pipeline: Supervised Fine-tuning followed by preference alignment. Includes a 34-test validation suite on quantization fidelity and loss correctness. No dependency on HuggingFace PEFT, TRL, or bitsandbytes.",
+    tags: ["PyTorch", "QLoRA", "DPO", "LLM Alignment", "NF4 Quantization"],
+    github: "https://github.com/Sanjay1S/LLM-Alignment-Lab",
+  },
+  {
+    title: "DoRA: Weight-Decomposed Low-Rank Adaptation",
+    description:
+      "From-scratch PyTorch implementation of DoRA (ICML 2024 Oral, NVIDIA), decomposing pretrained weights into independent magnitude and direction components for fine-tuning. Supports LLaMA, Mistral, Gemma, GPT-2, OPT, and Phi architectures. Adds only 0.01% parameters beyond LoRA while consistently improving performance. Includes weight merging for zero-overhead inference.",
+    tags: ["PyTorch", "DoRA", "LoRA", "Fine-tuning", "ICML 2024"],
+    github: "https://github.com/Sanjay1S/DoRA-From-Scratch",
+  },
   {
     title: "Supply Chain Lead Time Automation",
     description:

@@ -12,14 +12,14 @@ export default function Home() {
               {SITE.name}
             </h1>
             <p className="text-xl sm:text-2xl text-text-secondary font-heading font-medium mb-6">
-              Member of Technical Staff
+              Machine Learning Engineer
             </p>
             <div className="h-px w-12 bg-accent mb-8" />
             <p className="text-lg leading-relaxed text-text-secondary max-w-xl">
               I build and fine-tune ML systems: from diffusion models and RAG
-              pipelines to supply chain automations and production-scale NLP.
-              Currently at Corsair Gaming, working on generative AI, intelligent
-              automation, and information retrieval. Previously at Optum,
+              pipelines to LLM alignment and production-scale inference.
+              Currently at Corsair Gaming, working on generative AI, multi-agent
+              systems, and intelligent automation. Previously at Optum,
               building healthcare AI across NLP, computer vision, and
               large-scale data pipelines.
             </p>
@@ -41,16 +41,16 @@ export default function Home() {
           <div className="border-l-[3px] border-accent pl-6 space-y-4">
             <p className="leading-relaxed">
               <span className="font-heading font-semibold text-text">
-                Data Scientist at Corsair Gaming
+                Machine Learning Engineer at Corsair Gaming
               </span>
               <span className="text-text-muted"> — Milpitas, CA</span>
             </p>
             <p className="text-text-secondary leading-relaxed">
-              Fine-tuning Qwen diffusion models via LoRA with split training
-              architectures. Building supply chain planning automations that
-              cut planner cycle time by ~70%. Architecting multi-agent systems
-              for AI-powered image generation. Deploying on-prem LLM inference
-              at scale with vLLM and Docker.
+              Architecting multi-agent systems for AI-powered image generation.
+              Fine-tuning Qwen diffusion models via LoRA and benchmarking DoRA
+              across adapter strategies. Building supply chain planning
+              automations that cut planner cycle time by ~70%. Deploying
+              on-prem LLM inference at scale with vLLM and Docker.
             </p>
           </div>
         </Container>
